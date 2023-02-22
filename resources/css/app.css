@@ -1,0 +1,14 @@
+#navbar {
+  background-color: transparent;
+  transition: background-color 0.5s ease-in-out;
+}
+
+#navbar.scrolled {
+  background-color: #1864ab;
+}
+
+.banner-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../../public/images/atikah-akhtar-XJptUS8nbhs-unsplash.jpg");
+  background-size: cover;
+}
