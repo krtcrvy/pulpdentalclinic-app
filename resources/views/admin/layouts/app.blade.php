@@ -22,7 +22,7 @@
 
 <body>
     @include('admin.layouts.partials._navbar')
-    <main class="mt-5 pt-3">
+    <main>
         @yield('content')
     </main>
 </body>
