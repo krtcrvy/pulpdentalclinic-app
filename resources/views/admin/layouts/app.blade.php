@@ -20,11 +20,17 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body>
+<body class="sb-nav-fixed">
     @include('admin.layouts.partials._navbar')
-    <main>
-        @yield('content')
-    </main>
+    <div id="layoutSidenav">
+        @include('admin.layouts.partials._sidebar')
+        <div id="layoutSidenav_content">
+            <main>
+                @yield('content')
+            </main>
+            @include('admin.layouts.partials._footer')
+        </div>
+    </div>
 </body>
 
 </html>
