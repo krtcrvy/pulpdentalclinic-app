@@ -17,7 +17,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 
     <!-- Scripts -->
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/css/datatables.min.css'])
+
 </head>
 
 <body class="sb-nav-fixed">
@@ -25,7 +26,7 @@
     <div id="layoutSidenav">
         @include('admin.layouts.partials._sidebar')
         <div id="layoutSidenav_content">
-            <main>
+            <main class="container-fluid px-4">
                 @yield('content')
             </main>
             @include('admin.layouts.partials._footer')
