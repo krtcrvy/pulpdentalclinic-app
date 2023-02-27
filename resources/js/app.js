@@ -1,4 +1,6 @@
 import "./bootstrap";
+import "../sass/app.scss";
+import * as bootstrap from "bootstrap";
 
 window.addEventListener("scroll", function () {
   const navbar = document.getElementById("navbar");
