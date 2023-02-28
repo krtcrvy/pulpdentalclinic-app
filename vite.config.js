@@ -9,7 +9,6 @@ export default defineConfig({
         "resources/css/app.css",
         "resources/sass/app.scss",
         "resources/js/app.js",
-        "resources/css/datatables.min.css",
       ],
       refresh: true,
     }),

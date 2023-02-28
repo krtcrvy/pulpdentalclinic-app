@@ -1,7 +1,6 @@
 import "./bootstrap";
 import "../sass/app.scss";
 import * as bootstrap from "bootstrap";
-import "./datatables.min";
 
 window.addEventListener("scroll", function () {
   const navbar = document.getElementById("navbar");
