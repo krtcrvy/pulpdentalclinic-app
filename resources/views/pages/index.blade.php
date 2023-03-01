@@ -32,7 +32,6 @@
             </div>
         </div>
     </section>
-
     <section class="bg-primary">
         <div class="container px-4 py-5">
             <h2 class="display-5 pb-2 text-center text-light">How could we help you?</h2>
@@ -49,7 +48,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="col">
                     <div class="card mb-4 rounded-3 shadow-sm h-100">
                         <div class="card-body d-flex justify-content-between align-items-center flex-column p-5">
@@ -63,7 +61,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="col">
                     <div class="card mb-4 rounded-3 shadow-sm h-100">
                         <div class="card-body d-flex justify-content-between align-items-center flex-column p-5">
@@ -76,7 +73,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="col">
                     <div class="card mb-4 rounded-3 shadow-sm h-100">
                         <div class="card-body d-flex justify-content-between align-items-center flex-column p-5">
