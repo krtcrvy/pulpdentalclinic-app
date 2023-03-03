@@ -1,12 +1,6 @@
 import "./bootstrap";
 import "../sass/app.scss";
 import * as bootstrap from "bootstrap";
-<<<<<<< Updated upstream
-=======
-import $ from "jquery";
-import "datatables.net-bs5/css/dataTables.bootstrap5.min.css";
-import "datatables.net-bs5/js/dataTables.bootstrap5.min.js";
->>>>>>> Stashed changes
 
 window.addEventListener("scroll", function () {
   const navbar = document.getElementById("navbar");
