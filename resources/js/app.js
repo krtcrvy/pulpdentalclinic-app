@@ -8,15 +8,15 @@ window.addEventListener("scroll", function () {
         navbar.classList.add("navbar-light");
         navbar.classList.add("bg-light");
         navbar.classList.remove("navbar-dark");
-        button.classList.add("btn-outline-primary");
-        button.classList.remove("btn-primary");
+        button.classList.add("btn-primary");
+        button.classList.remove("btn-outline-light");
         navbarBrand.classList.add("text-primary");
     } else {
         navbar.classList.add("navbar-dark");
         navbar.classList.remove("bg-light");
         navbar.classList.remove("navbar-light");
-        button.classList.remove("btn-outline-primary");
-        button.classList.add("btn-primary");
+        button.classList.remove("btn-primary");
+        button.classList.add("btn-outline-light");
         navbarBrand.classList.remove("text-primary");
     }
 });
@@ -38,6 +38,18 @@ window.addEventListener("DOMContentLoaded", (event) => {
             );
         });
     }
+});
+
+$(document).ready(function () {
+    $(window).scroll(function () {
+        if ($(document).scrollTop() > 10) {
+            $("#navbar-brand-img-top").hide();
+            $("#navbar-brand-img-scroll").show();
+        } else {
+            $("#navbar-brand-img-top").show();
+            $("#navbar-brand-img-scroll").hide();
+        }
+    });
 });
 
 $(document).ready(function () {

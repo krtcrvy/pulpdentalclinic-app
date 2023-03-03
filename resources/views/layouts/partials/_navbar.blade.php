@@ -1,6 +1,10 @@
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="navbar">
     <div class="container">
-        <a class="navbar-brand" href="#" id="navbar-brand">Pulp Dental Clinic</a>
+        <a class="navbar-brand" href="#" id="navbar-brand">
+            <img src="{{ asset('images/pulp-light.png') }}" alt="logo" height="32" id="navbar-brand-img-top">
+            <img src="{{ asset('images/pulp.png') }}" alt="logo" height="32" id="navbar-brand-img-scroll">
+            Pulp Dental Clinic
+        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -25,7 +29,7 @@
                     </ul>
                 </li>
             </ul>
-            <button class="btn btn-primary" type="submit" id="button">Request an appointment</button>
+            <button class="btn btn-outline-light" type="submit" id="button">Request an appointment</button>
         </div>
     </div>
 </nav>

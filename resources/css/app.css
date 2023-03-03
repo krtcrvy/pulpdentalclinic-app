@@ -3,6 +3,17 @@
     background-color: transparent;
     transition: background-color 0.5s ease-in-out;
 }
+#navbar-brand-img-scroll {
+    display: none;
+}
+
+#navbar-brand-img-top {
+    max-width: 200px;
+}
+
+#navbar-brand-img-scroll {
+    max-width: 150px;
+}
 
 .banner-image {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),

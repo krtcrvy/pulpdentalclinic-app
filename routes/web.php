@@ -14,9 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-  return view('pages.index');
+    return view('pages.index');
 });
 
 Route::get('/admin', function () {
-  return view('admin.index');
+    return view('admin.index');
 });
