@@ -22,6 +22,41 @@
     background-attachment: fixed !important;
 }
 
+.banner-extraction {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("../../public/images/extraction_image.jpeg");
+    background-size: cover;
+    background-attachment: fixed !important;
+}
+
+.banner-filling {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("../../public/images/filling_image.jfif");
+    background-size: cover;
+    background-attachment: fixed !important;
+}
+
+.banner-orthodontics {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("../../public/images/orthodontics_image.jpg");
+    background-size: cover;
+    background-attachment: fixed !important;
+}
+
+.banner-veeners {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("../../public/images/veeners_image.jpg");
+    background-size: cover;
+    background-attachment: fixed !important;
+}
+
+.banner-whitening {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("../../public/images/whitening_image.jpeg");
+    background-size: cover;
+    background-attachment: fixed !important;
+}
+
 /* Admin */
 .sb-nav-fixed #layoutSidenav #layoutSidenav_nav,
 .sb-nav-fixed .sb-topnav {
@@ -265,4 +300,124 @@
 }
 .sb-sidenav-light .sb-sidenav-footer {
     background-color: #e9ecef;
+}
+
+.recent-blog-posts .post-box {
+    box-shadow: 0px 0 30px rgba(1, 41, 112, 0.08);
+    transition: 0.3s;
+    height: 100%;
+    overflow: hidden;
+    padding: 30px;
+    border-radius: 8px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.post-img img {
+    height: 280px;
+    width: 100%;
+}
+
+.recent-blog-posts .post-box .post-img {
+    overflow: hidden;
+    margin: -30px -30px 15px -30px;
+    position: relative;
+}
+
+.recent-blog-posts .post-box .post-img img {
+    transition: 0.5s;
+}
+
+.recent-blog-posts .post-box .post-date {
+    font-size: 16px;
+    font-weight: 600;
+    color: rgba(1, 41, 112, 0.6);
+    display: block;
+    margin-bottom: 10px;
+}
+
+.recent-blog-posts .post-box .post-title {
+    font-size: 24px;
+    color: #012970;
+    font-weight: 700;
+    margin-bottom: 18px;
+    position: relative;
+    transition: 0.3s;
+}
+
+.recent-blog-posts .post-box .readmore {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    line-height: 1;
+    transition: 0.3s;
+}
+
+.recent-blog-posts .post-box .readmore i {
+    line-height: 0;
+    margin-left: 4px;
+    font-size: 18px;
+}
+
+.recent-blog-posts .post-box:hover .post-title {
+    color: #4154f1;
+}
+
+.recent-blog-posts .post-box:hover .post-img img {
+    transform: rotate(6deg) scale(1.2);
+}
+
+.services-img {
+    width: 300px;
+    height: 200px;
+}
+
+body {
+    background-color: #eee;
+}
+
+.card {
+    border: none;
+    height: 100%;
+}
+
+.card .user-content {
+    font-size: 1.5em;
+}
+
+.user-content p {
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+.ratings i {
+    color: blue;
+}
+
+.card p {
+    font-size: 0.6em;
+}
+
+.hours {
+    margin-right: 90px !important;
+}
+
+.card-body p {
+    font-size: 15px;
+}
+
+/* .image-extraction {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+ */
+
+.image-extraction img {
+    position: relative;
+    height: 400px;
+    width: 550px;
+    box-shadow: 0px 0px 90px rgba(0, 0, 0, 0.5);
 }

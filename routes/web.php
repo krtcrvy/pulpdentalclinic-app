@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,4 +17,25 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', [HomeController::class, 'index'])->name('home');
+
+
+Route::get('/services/extraction', function () {
+    return view('services.extraction');
+});
+
+Route::get('/services/filling', function () {
+    return view('services.filling');
+});
+
+Route::get('/services/orthodontics', function () {
+    return view('services.orthodontics');
+});
+
+Route::get('/services/veeners', function () {
+    return view('services.veeners');
+});
+
+Route::get('/services/whitening', function () {
+    return view('services.whitening');
+});
