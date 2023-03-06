@@ -4,13 +4,13 @@
             <div class="nav">
                 <div class="sb-sidenav-menu-heading">Core</div>
                 <a class="nav-link" href="index.html">
-                    <div class="sb-nav-link-icon"><i class="bi bi-speedometer fs-3"></i></div>
+                    <div class="sb-nav-link-icon"><i class="bi bi-speedometer fs-5"></i></div>
                     Dashboard
                 </a>
                 <div class="sb-sidenav-menu-heading">Interface</div>
                 <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts"
                     aria-expanded="false" aria-controls="collapseLayouts">
-                    <div class="sb-nav-link-icon"><i class="bi bi-columns fs-3"></i></div>
+                    <div class="sb-nav-link-icon"><i class="bi bi-columns fs-5"></i></div>
                     Layouts
                     <div class="sb-sidenav-collapse-arrow"><i class="bi bi-caret-down-fill"></i></div>
                 </a>
@@ -23,7 +23,7 @@
                 </div>
                 <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages"
                     aria-expanded="false" aria-controls="collapsePages">
-                    <div class="sb-nav-link-icon"><i class="bi bi-book fs-3"></i></div>
+                    <div class="sb-nav-link-icon"><i class="bi bi-book fs-5"></i></div>
                     Pages
                     <div class="sb-sidenav-collapse-arrow"><i class="bi bi-caret-down-fill"></i></div>
                 </a>
@@ -61,18 +61,18 @@
                 </div>
                 <div class="sb-sidenav-menu-heading">Addons</div>
                 <a class="nav-link" href="charts.html">
-                    <div class="sb-nav-link-icon"><i class="bi bi-bar-chart fs-3"></i></div>
+                    <div class="sb-nav-link-icon"><i class="bi bi-bar-chart fs-5"></i></div>
                     Charts
                 </a>
                 <a class="nav-link" href="tables.html">
-                    <div class="sb-nav-link-icon"><i class="bi bi-table fs-3"></i></div>
+                    <div class="sb-nav-link-icon"><i class="bi bi-table fs-5"></i></div>
                     Tables
                 </a>
             </div>
         </div>
         <div class="sb-sidenav-footer">
             <div class="small">Logged in as:</div>
-            Start Bootstrap
+            Name
         </div>
     </nav>
 </div>

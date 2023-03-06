@@ -5,6 +5,7 @@
             <img src="{{ asset('images/pulp.png') }}" alt="logo" height="32" id="navbar-brand-img-scroll">
             Pulp Dental Clinic
         </a>
+
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -28,8 +29,21 @@
                         <li><a class="dropdown-item" href="#">Something else here</a></li>
                     </ul>
                 </li>
+                @if (Auth::check())
+                    <li class="nav-item">
+                        <form action="{{ route('logout') }}" method="post">
+                            @csrf
+                            <a class="nav-link" aria-current="page" href="/logout">Logout</a>
+                        </form>
+                    </li>
+                @else
+                    <a href="{{ route('register') }}">
+                        <button class="btn btn-outline-light" type="submit" id="button">Request an
+                            appointment</button>
+                    </a>
+                @endif
             </ul>
-            <button class="btn btn-outline-light" type="submit" id="button">Request an appointment</button>
+
         </div>
     </div>
 </nav>
