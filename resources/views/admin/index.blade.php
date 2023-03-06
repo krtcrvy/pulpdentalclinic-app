@@ -1,5 +1,5 @@
 <x-admin-master>
-    @section('title', 'Pulp Dental Clinic | Admin')
+    @section('title', 'Admin | Pulp Dental Clinic')
 
     @section('content')
         <h1 class="mt-4">Dashboard</h1>

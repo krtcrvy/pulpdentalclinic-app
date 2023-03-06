@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="navbar">
     <div class="container">
-        <a class="navbar-brand" href="#" id="navbar-brand">
+        <a class="navbar-brand" href="{{ route('home') }}" id="navbar-brand">
             <img src="{{ asset('images/pulp-light.png') }}" alt="logo" height="32" id="navbar-brand-img-top">
             <img src="{{ asset('images/pulp.png') }}" alt="logo" height="32" id="navbar-brand-img-scroll">
             Pulp Dental Clinic
@@ -43,7 +43,6 @@
                     </a>
                 @endif
             </ul>
-
         </div>
     </div>
 </nav>

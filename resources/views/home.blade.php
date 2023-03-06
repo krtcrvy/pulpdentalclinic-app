@@ -1,5 +1,5 @@
 <x-home-master>
-    @section('title', 'Pulp Dental Clinic | Home')
+    @section('title', 'Home | Pulp Dental Clinic')
 
     @section('content')
         <section class="banner-image vh-100 d-flex justify-content-center align-items-center">
