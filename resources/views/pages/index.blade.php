@@ -7,22 +7,29 @@
 @endsection
 
 @section('content')
-    <section class="banner-image vh-100 d-flex justify-content-center align-items-center">
-        <div class="container text-light">
-            <h2>Welcome to</h2>
-            <h1 class="display-1">Pulp Dental Clinic</h1>
-            <h2>Your Trusted Dental Care Provider</h2>
+    <!-- Parallax hero section -->
+    <section class="parallax-hero d-flex align-items-center">
+        <div class="container">
+            <div class="row">
+                <div class="text-light">
+                    <h2>Welcome to</h2>
+                    <h1 class="display-1">Pulp Dental Clinic</h1>
+                    <h2>Your Trusted Dental Care Provider</h2>
+                </div>
+            </div>
         </div>
     </section>
+    <!-- End of Parallax hero section -->
+
     <section class="container col-xxl-12 px-4 py-5 mb-5">
         <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
             <div class="col-10 col-sm-8 col-lg-6">
                 <img src="{{ asset('images/clinic_pic.jpg') }}" class="img-fluid rounded"
-                    alt="A picture of a dentist treating a patient" width="550">
+                    alt="A picture of a dentist treating a patient" width="500">
             </div>
             <div class="col-lg-6 blue-text text-primary">
-                <h2 class="display-5">Hello! This is</h2>
-                <h3 class="mb-4 display-3">PULP Dental Clinic</h3>
+                <h3 class="display-5">Hello! This is</h3>
+                <h2 class="mb-4 display-3">PULP Dental Clinic</h2>
                 <p class="lead">
                     Our Liberty dentist office was built for people of all ages and celebrates the joy of a happy,
                     healthy
@@ -42,7 +49,7 @@
 
     <section class="bg-primary">
         <div class="container px-4 py-5">
-            <h2 class="display-4 pb-2 text-center text-light">How could we help you?</h2>
+            <h2 class="display-5 pb-2 text-center text-light">How could we help you?</h2>
             <div class="row row-cols-1 row-cols-lg-4 align-items-stretch g-4 py-5">
                 <div class="col">
                     <div class="card mb-4 rounded-3 shadow-sm h-100">

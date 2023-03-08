@@ -17,14 +17,17 @@
 }
 
 #footer {
-    background-color: #145591;
+    background-color: #063a6d;
 }
 
-.banner-image {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url("../../public/images/atikah-akhtar-XJptUS8nbhs-unsplash.jpg");
+/* Parallax effect */
+.parallax-hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url("../../public/images/hero.jpg");
     background-size: cover;
-    background-attachment: fixed !important;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
 }
 
 /* Admin */
