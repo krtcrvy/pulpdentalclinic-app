@@ -2,6 +2,10 @@
 
 @section('title', 'Home | Pulp Dental Clinic')
 
+@section('navbar')
+    @include('layouts.partials.navbar-transparent')
+@endsection
+
 @section('content')
     <section class="banner-image vh-100 d-flex justify-content-center align-items-center">
         <div class="container text-light">
@@ -35,6 +39,7 @@
             </div>
         </div>
     </section>
+
     <section class="bg-primary">
         <div class="container px-4 py-5">
             <h2 class="display-4 pb-2 text-center text-light">How could we help you?</h2>
@@ -97,4 +102,8 @@
             </div>
         </div>
     </section>
+@endsection
+
+@section('footer')
+    @include('layouts.partials.footer')
 @endsection

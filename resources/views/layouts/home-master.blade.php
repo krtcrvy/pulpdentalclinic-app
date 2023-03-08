@@ -11,14 +11,18 @@
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('images/favicon_io/favicon-16x16.png') }}">
     <link rel="manifest" href="{{ asset('images/favicon_io/site.webmanifest') }}">
 
+    @yield('style')
+
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js', 'resources/css/app.css'])
 </head>
 
 <body>
-    @include('layouts.partials.home-navbar-scrolled')
+    @yield('navbar')
 
     @yield('content')
+
+    @yield('footer')
 
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"
         integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>

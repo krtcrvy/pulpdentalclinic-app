@@ -13,8 +13,6 @@
         "vite": "^4.0.0"
     },
     "dependencies": {
-        "bootstrap-icons": "^1.10.3",
-        "datatables.net-bs5": "^1.13.2",
-        "jquery": "^3.6.3"
+        "bootstrap-icons": "^1.10.3"
     }
 }

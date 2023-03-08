@@ -13,14 +13,14 @@
 </head>
 
 <body class="sb-nav-fixed">
-    @include('admin.layouts.partials.admin-navbar')
+    @include('admin.layouts.partials.navbar')
     <div id="layoutSidenav">
-        @include('admin.layouts.partials.admin-sidebar')
+        @include('admin.layouts.partials.sidebar')
         <div id="layoutSidenav_content">
             <main class="container-fluid px-4">
                 @yield('content')
             </main>
-            @include('admin.layouts.partials.admin-footer')
+            @include('admin.layouts.partials.footer')
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>

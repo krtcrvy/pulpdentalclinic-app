@@ -1,25 +1,36 @@
 import "./bootstrap";
 
 window.addEventListener("scroll", function () {
-    const navbar = document.getElementById("navbar");
-    const button = document.getElementById("button");
+    const navbarTransparent = document.getElementById("navbarTransparent");
+    const button = document.getElementById("buttonOutline");
     const navbarBrand = document.getElementById("navbar-brand");
     if (window.scrollY > 0) {
-        navbar.classList.add("navbar-light");
-        navbar.classList.add("bg-light");
-        navbar.classList.remove("navbar-dark");
+        navbarTransparent.classList.add("navbar-light");
+        navbarTransparent.classList.add("bg-light");
+        navbarTransparent.classList.add("shadow-sm");
+        navbarTransparent.classList.remove("navbar-dark");
         button.classList.add("btn-primary");
         button.classList.remove("btn-outline-light");
         navbarBrand.classList.add("text-primary");
     } else {
-        navbar.classList.add("navbar-dark");
-        navbar.classList.remove("bg-light");
-        navbar.classList.remove("navbar-light");
+        navbarTransparent.classList.add("navbar-dark");
+        navbarTransparent.classList.remove("bg-light");
+        navbarTransparent.classList.remove("navbar-light");
+        navbarTransparent.classList.remove("shadow-sm");
         button.classList.remove("btn-primary");
         button.classList.add("btn-outline-light");
         navbarBrand.classList.remove("text-primary");
     }
 });
+
+/* window.addEventListener("scroll", function () {
+    const navbar = document.getElementById("navbar");
+    if (window.scrollY > 0) {
+        navbar.classList.add("bg-light");
+    } else {
+        navbar.classList.remove("bg-light");
+    }
+}); */
 
 window.addEventListener("DOMContentLoaded", (event) => {
     // Toggle the side navigation
