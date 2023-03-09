@@ -23,7 +23,7 @@
 /* Parallax effect */
 .parallax-hero {
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-        url("../../public/images/hero.jpg");
+        url("../../public/images/hero.png");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
