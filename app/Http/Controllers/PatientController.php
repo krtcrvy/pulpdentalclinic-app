@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Appointment;
+use App\Models\Patient;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
-class AppointmentController extends Controller
+class PatientController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -36,7 +36,7 @@ class AppointmentController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Appointment $appointment): Response
+    public function show(Patient $patient): Response
     {
         //
     }
@@ -44,7 +44,7 @@ class AppointmentController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Appointment $appointment): Response
+    public function edit(Patient $patient): Response
     {
         //
     }
@@ -52,7 +52,7 @@ class AppointmentController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Appointment $appointment): RedirectResponse
+    public function update(Request $request, Patient $patient): RedirectResponse
     {
         //
     }
@@ -60,7 +60,7 @@ class AppointmentController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Appointment $appointment): RedirectResponse
+    public function destroy(Patient $patient): RedirectResponse
     {
         //
     }

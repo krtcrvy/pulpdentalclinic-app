@@ -1,6 +1,6 @@
 @extends('layouts.home-master')
 
-@section('title', 'Home | Pulp Dental Clinic')
+@section('title', 'Pulp Dental Clinic | Home')
 
 @section('navbar')
     @include('layouts.partials.navbar-transparent')

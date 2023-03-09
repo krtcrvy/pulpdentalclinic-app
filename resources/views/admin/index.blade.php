@@ -1,12 +1,9 @@
 @extends('admin.layouts.admin-master')
 
-@section('title', 'Admin | Pulp Dental Clinic')
+@section('title', 'Pulp Dental Clinic | Admin')
 
 @section('content')
     <h1 class="mt-4">Dashboard</h1>
-    <ol class="breadcrumb mb-4">
-        <li class="breadcrumb-item active">Dashboard</li>
-    </ol>
     <table id="example" class="table table-striped" style="width:100%">
         <thead>
             <tr>

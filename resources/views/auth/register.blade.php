@@ -12,7 +12,7 @@
     @include('layouts.partials.navbar')
 @endsection
 
-@section('title', 'Sign Up | Pulp Dental Clinic')
+@section('title', ' Pulp Dental Clinic | Sign Up')
 
 @section('content')
     <div class="container col-xl-10 col-xxl-8 px-4 py-5">

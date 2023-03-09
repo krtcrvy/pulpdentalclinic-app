@@ -23,22 +23,13 @@ window.addEventListener("scroll", function () {
     }
 });
 
-/* window.addEventListener("scroll", function () {
-    const navbar = document.getElementById("navbar");
-    if (window.scrollY > 0) {
-        navbar.classList.add("bg-light");
-    } else {
-        navbar.classList.remove("bg-light");
-    }
-}); */
-
 window.addEventListener("DOMContentLoaded", (event) => {
     // Toggle the side navigation
     const sidebarToggle = document.body.querySelector("#sidebarToggle");
     if (sidebarToggle) {
         // Uncomment Below to persist sidebar toggle between refreshes
-        // if (localStorage.getItem('sb|sidebar-toggle') === 'true') {
-        //     document.body.classList.toggle('sb-sidenav-toggled');
+        // if (localStorage.getItem("sb|sidebar-toggle") === "true") {
+        //     document.body.classList.toggle("sb-sidenav-toggled");
         // }
         sidebarToggle.addEventListener("click", (event) => {
             event.preventDefault();
@@ -64,5 +55,18 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
-    $("#example").DataTable();
+    $("#dataTables").DataTable();
+});
+
+$("#editModal").on("show.bs.modal", function (event) {
+    const button = $(event.relatedTarget);
+    const id = button.data("id");
+    const name = button.data("name");
+
+    const modal = $(this);
+    modal.find('.modal-body input[name="name"]').val(name);
+});
+
+$("#submitRoleFormBtn").click(function () {
+    $("#editRoleForm").submit();
 });
