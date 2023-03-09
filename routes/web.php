@@ -39,3 +39,11 @@ Route::get('/services/veeners', function () {
 Route::get('/services/whitening', function () {
     return view('services.whitening');
 });
+
+Route::get('/forms/login', function () {
+    return view('forms.login');
+});
+
+Route::get('/services/services', function () {
+    return view('services.services');
+});
