@@ -57,16 +57,3 @@ $(document).ready(function () {
 $(document).ready(function () {
     $("#dataTables").DataTable();
 });
-
-$("#editModal").on("show.bs.modal", function (event) {
-    const button = $(event.relatedTarget);
-    const id = button.data("id");
-    const name = button.data("name");
-
-    const modal = $(this);
-    modal.find('.modal-body input[name="name"]').val(name);
-});
-
-$("#submitRoleFormBtn").click(function () {
-    $("#editRoleForm").submit();
-});
