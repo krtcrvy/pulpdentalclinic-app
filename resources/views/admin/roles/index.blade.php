@@ -65,7 +65,7 @@
 
                                             {{-- Edit Button --}}
                                             <a href="#editRole{{ $role->id }}" data-bs-toggle="modal"
-                                                class="btn btn-success"><i class='fa fa-edit'></i>Edit</a>
+                                                class="btn btn-success"><i class="bi bi-pencil-square"></i></a>
                                             {{-- Edit Button --}}
 
                                             {{-- Edit Modal --}}
