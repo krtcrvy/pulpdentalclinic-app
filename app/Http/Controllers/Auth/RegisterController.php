@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\Patient;
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -52,9 +53,12 @@ class RegisterController extends Controller
             'first_name' => ['required', 'string', 'max:255'],
             'last_name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'contact_number' => ['required', 'string', 'max:11'],
-            'username' => ['required', 'string', 'max:255'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'contact_number' => ['required', 'string', 'regex:/^[0-9]+$/', 'max:11'],
+            'username' => ['required', 'string', 'max:255', 'unique:users'],
+            'password' => ['required', 'string', 'min:8'],
+            'birthday' => ['required', 'date_format:Y-m-d'],
+            'gender' => ['required', 'in:male,female,nonbinary,transgender'],
+            'address' => ['required']
         ]);
     }
 
@@ -64,9 +68,9 @@ class RegisterController extends Controller
      * @param array $data
      * @return \App\Models\User
      */
-    protected function create(array $data)
+    protected function create(array $data, User $user, Patient $patient)
     {
-        return User::create([
+        $user = $user->create([
             'first_name' => $data['first_name'],
             'last_name' => $data['last_name'],
             'email' => $data['email'],
@@ -74,5 +78,17 @@ class RegisterController extends Controller
             'username' => $data['username'],
             'password' => $data['password'],
         ]);
+
+        $patient = $patient->create([
+            'first_name' => $data['first_name'],
+            'last_name' => $data['last_name'],
+            'email' => $data['email'],
+            'birthday' => $data['birthday'],
+            'gender' => $data['gender'],
+            'contact_number' => $data['contact_number'],
+            'user_id' => $user->id,
+        ]);
+
+        return $user;
     }
 }

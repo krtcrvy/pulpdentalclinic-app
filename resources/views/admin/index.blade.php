@@ -3,8 +3,8 @@
 @section('title', 'Pulp Dental Clinic | Admin')
 
 @section('content')
-    <h1 class="mt-4">Dashboard</h1>
-    <table id="example" class="table table-striped" style="width:100%">
+    <h1 class="mt-4 text-primary">Dashboard</h1>
+    <table id="dataTables" class="table table-striped" style="width:100%">
         <thead>
             <tr>
                 <th>Name</th>

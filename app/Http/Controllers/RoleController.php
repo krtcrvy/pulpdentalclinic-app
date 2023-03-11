@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Permission;
 use App\Models\Role;
 use Illuminate\Support\Str;
 
@@ -13,7 +14,11 @@ class RoleController extends Controller
     public function index()
     {
         $roles = Role::all();
-        return view('admin.roles.index', ['roles' => $roles]);
+        $permissions = Permission::all();
+        return view('admin.roles.index', [
+            'roles' => $roles,
+            'permissions' => $permissions
+        ]);
     }
 
     /**
@@ -74,6 +79,24 @@ class RoleController extends Controller
         } else {
             session()->flash('role-updated', 'Nothing has been updated');
         }
+
+        return back();
+    }
+
+    public function attach_permission(Role $role)
+    {
+        $role->permissions()->attach(request('permission'));
+
+        session()->flash('permission-attached', 'Permission has been attached');
+
+        return back();
+    }
+
+    public function detach_permission(Role $role)
+    {
+        $role->permissions()->detach(request('permission'));
+
+        session()->flash('permission-detached', 'Permission has been detached');
 
         return back();
     }

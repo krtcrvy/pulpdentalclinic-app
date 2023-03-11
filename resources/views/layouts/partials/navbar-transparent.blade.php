@@ -13,17 +13,24 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link {{ Request::is('/') ? 'active' : '' }}" href="/">Home</a>
+                    <a class="nav-link {{ Request::is('/') ? 'active' : '' }}" href="/"><i
+                            class="bi bi-house me-2"></i>Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ Request::is('/services') ? 'active' : '' }}" href="/services">Services</a>
+                    <a class="nav-link {{ Request::is('/services') ? 'active' : '' }}" href="/services"><i
+                            class="bi bi-hospital me-2"></i>Services</a>
                 </li>
             </ul>
 
             <ul class="navbar-nav mb-2 mb-lg-0">
                 @if (Auth::check())
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="/logout">Logout</a>
+                        <a class="nav-link {{ Request::is('/services') ? 'active' : '' }}" href="/profile"><i
+                                class="bi bi-person-circle me-2"></i>Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{ Request::is('/services') ? 'active' : '' }}" href="/logout"><i
+                                class="bi bi-box-arrow-right me-2"></i>Logout</a>
                     </li>
                 @else
                     <a href="{{ route('login') }}">
@@ -31,7 +38,6 @@
                             appointment</button>
                     </a>
                 @endif
-
             </ul>
         </div>
     </div>

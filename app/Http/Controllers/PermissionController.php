@@ -2,18 +2,21 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\RedirectResponse;
+use App\Models\Permission;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Http\RedirectResponse;
 
 class PermissionController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index(): Response
+    public function index()
     {
-        //
+        $permissions = Permission::all();
+        return view('admin.permissions.index', ['permissions' => $permissions]);
     }
 
     /**
@@ -27,9 +30,20 @@ class PermissionController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request): RedirectResponse
+    public function store()
     {
-        //
+        request()->validate([
+            'name' => ['required']
+        ]);
+
+        Permission::create([
+            'name' => Str::title(request('name')),
+            'slug' => Str::of(Str::lower(request('name')))->slug('-')
+        ]);
+
+        session()->flash('permission-added', 'Permission added: ' . request('name'));
+
+        return back();
     }
 
     /**
@@ -43,7 +57,7 @@ class PermissionController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id): Response
+    public function edit()
     {
         //
     }
@@ -51,16 +65,31 @@ class PermissionController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id): RedirectResponse
+    public function update(Permission $permission)
     {
-        //
+        $permission->name = Str::title(request('name'));
+        $permission->slug = Str::of(request('name'))->slug('-');
+
+        if ($permission->isDirty('name')) {
+            session()->flash('permission-updated', 'Permission updated: ' . request('name'));
+
+            $permission->save();
+        } else {
+            session()->flash('permission-updated', 'Nothing has been updated');
+        }
+
+        return back();
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id): RedirectResponse
+    public function destroy(Permission $permission)
     {
-        //
+        $permission->delete();
+
+        session()->flash('permission-deleted', 'Deleted permission: ' . $permission->name);
+
+        return back();
     }
 }

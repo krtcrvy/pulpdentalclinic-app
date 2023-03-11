@@ -12,19 +12,22 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="/">Home</a>
+                    <a class="nav-link" aria-current="page" href="/"><i class="bi bi-house me-2"></i>Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="/">Services</a>
+                    <a class="nav-link" aria-current="page" href="/"><i
+                            class="bi bi-hospital me-2"></i>Services</a>
                 </li>
             </ul>
             <ul class="navbar-nav">
                 @if (Auth::check())
                     <li class="nav-item">
-                        <form action="{{ route('logout') }}" method="post">
-                            @csrf
-                            <button class="btn btn-primary" type="submit" id="buttonPrimary">Logout</button>
-                        </form>
+                        <a class="nav-link {{ Request::is('/services') ? 'active' : '' }}" href="/services"><i
+                                class="bi bi-person-circle me-2"></i>Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{ Request::is('/services') ? 'active' : '' }}" href="/services"><i
+                                class="bi bi-box-arrow-right me-2"></i>Logout</a>
                     </li>
                 @else
                     <a href="{{ route('login') }}">
